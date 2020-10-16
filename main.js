@@ -3,6 +3,8 @@
 /**
  * Section 1
  */
+console.log("--------------- Section 1 ---------------");
+
 let loaf = {
     flour: 300,
     water: 210,
@@ -17,6 +19,7 @@ console.log("Hydration:", loaf.hydration());
 /**
  * Section 2
  */
+console.log("--------------- Section 2 ---------------");
 
 let weird = {
     foo: 42,
@@ -35,6 +38,7 @@ for(let key in weird) {
 /**
  * Section 3
  */
+console.log("--------------- Section 3 ---------------");
 
 let hobbit = {
     meals: [
@@ -49,6 +53,8 @@ console.log("Hobbit meal 4: ",hobbit.meals[3]);
 /**
  * Section 4
  */
+console.log("--------------- Section 4 ---------------");
+
 let people = [
     {
         name: 'Jack Daniels',
@@ -75,3 +81,21 @@ let people = [
 for(let person of people) {
     console.log("Name:", person.name, "Job Title:", person.jobTitle);
 }
+
+/**
+ * Section 5
+ */
+console.log("--------------- Section 5 ---------------");
+
+for(let i = 1; i < people.length; i++) {
+    people[i].boss = people[0].name;
+}
+
+for(let person of people) {
+    if(!person.boss) {
+        console.log(`${person.jobTitle} ${person.name} doesn't report to anybody.`);
+    } else {
+        console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}`);
+    }
+}
+
