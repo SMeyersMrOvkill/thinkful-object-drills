@@ -132,9 +132,9 @@ function decodeWords(words) {
  */
 console.log("--------------- Section 7 ---------------");
 
-function createCharacter(name, nickname, race, origin, attack, defense) {
+function createCharacter(name, nickname, race, origin, attack, defense, weapon) {
     return {
-        name, nickname, race, origin, attack, defense,
+        name, nickname, race, origin, attack, defense, weapon,
         describe: function() {
             console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
         },
@@ -153,12 +153,12 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
 }
 
 let characters = [
-    createCharacter("Gandalf the White", "gandalf", "Wizard", "Middle Earth", 10, 6),
-    createCharacter("Bilbo Baggins", "bilbo", "Hobbit", "The Shire", 2, 1),
-    createCharacter("Frodo Baggins", "frodo", "Hobbit", "The Shire", 3, 2),
-    createCharacter("Aragorn son of Arathorn", "aragorn", "Man", "Dunnedain", 6, 8),
-    createCharacter("Legolas", "legolas", "Elf", "Woodland Realm", 8, 5),
-    createCharacter("Arwen Undomiel", "arwen", "Half-Elf", "Revendell", 2, 4)
+    createCharacter("Gandalf the White", "gandalf", "Wizard", "Middle Earth", 10, 6, 'Wizard Staff'),
+    createCharacter("Bilbo Baggins", "bilbo", "Hobbit", "The Shire", 2, 1, 'The One Ring'),
+    createCharacter("Frodo Baggins", "frodo", "Hobbit", "The Shire", 3, 2, 'Sting'),
+    createCharacter("Aragorn son of Arathorn", "aragorn", "Man", "Dunnedain", 6, 8, 'Anduril'),
+    createCharacter("Legolas", "legolas", "Elf", "Woodland Realm", 8, 5, 'Bow and Arrow'),
+    createCharacter("Arwen Undomiel", "arwen", "Half-Elf", "Revendell", 2, 4, 'Hadhafang')
 ];
 
 let aragorn = characters.find(element => element.nickname === 'aragorn');
@@ -193,3 +193,5 @@ function findOne(arr, query) {
         }
     });
 }
+
+console.log(findOne(HEROES, {id: 2}));
