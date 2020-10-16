@@ -24,3 +24,13 @@ let weird = {
 for(let key in weird) {
     console.log("Key:", key, "Value:", weird[key]);
 }
+
+let hobbit = {
+    meals: [
+        'breakfast', 'second breakfast', 'elevenses',
+        'lunch', 'afternoon tea', 'dinner', 
+        'supper'
+    ]
+};
+
+console.log("Hobbit meal 4: ",hobbit.meals[3]);
